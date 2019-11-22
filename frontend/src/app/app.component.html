@@ -1,0 +1,10 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<!-- <app-root></app-root> -->
+<button (click)="getRooms()">get rooms</button>
+<div *ngFor="let room of rooms|async"> {{ room|json }}</div>
+<button (click)="getUsers()">get users</button>
+<div *ngFor="let user of users|async">{{user|json}}	</div>
+
+<button (click)=" createRoom()">add room</button>
+<div> {{newRoom|async|json}}</div>
